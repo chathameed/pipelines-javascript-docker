@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: chathameedpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: chathameedpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: chathameedpipelinesjavascriptdocker 
+          image: hameedcontainerregistry.azurecr.io/chathameedpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
